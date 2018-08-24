@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment">
+    <name>VM Payment - PluraCoin [PLURA] v.1.0</name>
+    <creationDate>April 05 2018</creationDate>
+    <author>pluracoin.org</author>
+    <authorUrl>https://pluracoin.org</authorUrl>
+    <copyright>Copyright (C) 2018 pluracoin.org. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0</version>
+    <description><![CDATA[<a href="https://pluracoin.org" target="_blank">PLURA</a> is a popular
+	e-commerce cryptocurrency.]]>
+    </description>
+
+    <files>
+        <filename plugin="plura">plura.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.plg_vmpayment_plura.ini</language>
+    </languages>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_virtuemart/fields">
+              <field class="required" name="plura_address" type="text" size="105" default="" label="VMPAYMENT_PLURA_ADDRESS"/>
+              <field class="required" name="plura_viewkey" type="text" size="105" default="" label="VMPAYMENT_PLURA_VIEWKEY"/>
+              <field class="required" name="plura_api" type="text" size="105" default="https://api.pluracoin.org/json_rpc" label="VMPAYMENT_PLURA_API"/>
+              <field class="required" name="plura_confirmations" type="text" size="10" default="10" label="VMPAYMENT_PLURA_CONFIRMATIONS"/>
+                
+            </fieldset>
+        </fields>
+    </vmconfig>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <!--<server type="extension" name="VirtueMart3 plg_vmpayment_plura Update Site"><![CDATA[http://update.xml]]></server>-->
+    </updateservers>
+</extension>
